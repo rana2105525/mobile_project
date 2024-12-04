@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mobile_project/screens/home_screen.dart';
 
-class LoginScreen extends StatelessWidget{
-    const LoginScreen({Key? key}) : super(key: key);
-    
-      @override
-   Widget build(BuildContext context) {
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black, // Set background color to black
       body: Stack(
         children: [
-          // Background image container - only showing the top half of the image
           Positioned(
             top: 0,
             left: 0,
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget{
           Column(
             children: [
               // Empty space for the background
-              Expanded(
+              const Expanded(
                 flex: 2,
                 child: SizedBox(),
               ),
@@ -69,7 +69,7 @@ class LoginScreen extends StatelessWidget{
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Welcome back',
                           style: TextStyle(
                             fontSize: 38.0,
@@ -78,7 +78,6 @@ class LoginScreen extends StatelessWidget{
                           ),
                         ),
                         const SizedBox(height: 10),
-                       
                         TextFormField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -141,12 +140,19 @@ class LoginScreen extends StatelessWidget{
                           width: double.infinity,
                           height: 54,
                           child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Login'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (e) => const HomeScreen(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               foregroundColor: Colors.white,
                               backgroundColor: Colors.black,
                             ),
+                            child: const Text('Login'),
                           ),
                         ),
                         const SizedBox(height: 20),
@@ -190,7 +196,7 @@ class LoginScreen extends StatelessWidget{
                                 shape: BoxShape.circle,
                               ),
                               padding: const EdgeInsets.all(16.0),
-                              child: Icon(
+                              child: const Icon(
                                 FontAwesomeIcons.facebookF,
                                 color: Colors.white,
                                 size: 24.0,
@@ -204,7 +210,7 @@ class LoginScreen extends StatelessWidget{
                                 shape: BoxShape.circle,
                               ),
                               padding: const EdgeInsets.all(16.0),
-                              child: Icon(
+                              child: const Icon(
                                 FontAwesomeIcons.google,
                                 color: Colors.white,
                                 size: 24.0,
@@ -223,5 +229,4 @@ class LoginScreen extends StatelessWidget{
       ),
     );
   }
-
 }

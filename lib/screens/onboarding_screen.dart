@@ -3,7 +3,7 @@ import 'package:mobile_project/screens/login_screen.dart';
 import 'package:mobile_project/screens/signup_screen.dart';
 
 class Onboarding extends StatelessWidget {
-  const Onboarding({Key? key}) : super(key: key);
+  const Onboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,12 @@ class Onboarding extends StatelessWidget {
                 ),
                 // Gradient overlay for smooth blending
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
                       colors: [
-                        const Color.fromARGB(
+                        Color.fromARGB(
                             255, 39, 38, 44), // Background color
                         Colors.transparent, // Fully transparent at the top
                       ],

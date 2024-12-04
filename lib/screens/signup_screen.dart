@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class SignupScreen extends StatelessWidget {
           Column(
             children: [
               // Empty space for the background
-              Expanded(
+              const Expanded(
                 flex: 2,
                 child: SizedBox(),
               ),
@@ -69,7 +69,7 @@ class SignupScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Get Started',
                           style: TextStyle(
                             fontSize: 38.0,
@@ -169,11 +169,11 @@ class SignupScreen extends StatelessWidget {
                           height: 54,
                           child: ElevatedButton(
                             onPressed: () {},
-                            child: const Text('Sign up'),
                             style: ElevatedButton.styleFrom(
                               foregroundColor: Colors.white,
                               backgroundColor: Colors.black,
                             ),
+                            child: const Text('Sign up'),
                           ),
                         ),
                         const SizedBox(height: 20),
@@ -217,7 +217,7 @@ class SignupScreen extends StatelessWidget {
                                 shape: BoxShape.circle,
                               ),
                               padding: const EdgeInsets.all(16.0),
-                              child: Icon(
+                              child: const Icon(
                                 FontAwesomeIcons.facebookF,
                                 color: Colors.white,
                                 size: 24.0,
@@ -231,7 +231,7 @@ class SignupScreen extends StatelessWidget {
                                 shape: BoxShape.circle,
                               ),
                               padding: const EdgeInsets.all(16.0),
-                              child: Icon(
+                              child: const Icon(
                                 FontAwesomeIcons.google,
                                 color: Colors.white,
                                 size: 24.0,
